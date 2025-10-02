@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#">Accounting</a></li>
+        <li><a href="#">Expenses</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Work Inquiry</a></li>
+        <li><a href="#">Contracts</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="bottom">
+      Light Mode 🌞
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Top Cards -->
+    <div class="top-cards">
+      <div class="card">
+        <h3>$13,596</h3>
+        <span>+1.2% This Month Revenue</span>
+      </div>
+      <div class="card">
+        <h3>+16</h3>
+        <span style="color:red;">-2.4% Project Accepted</span>
+      </div>
+      <div class="card">
+        <h3>92.8%</h3>
+        <span>+1.2% Delivered On Time</span>
+      </div>
+      <div class="card">
+        <h3>1h 00m</h3>
+        <span style="color:red;">-0.8% Responded On Time</span>
+      </div>
+    </div>
+
+    <!-- Middle Grid -->
+    <div class="grid">
+      <div class="chart">
+        <h4>Task Progress</h4>
+        <canvas id="taskChart"></canvas>
+      </div>
+      <div class="projects">
+        <h4>Active Projects</h4>
+        <div class="list-item"><span>Creative Corner</span><span>8 Days</span></div>
+        <div class="list-item"><span>Masendro Illustration</span><span>8 Days</span></div>
+        <div class="list-item"><span>Space Template</span><span>8 Days</span></div>
+        <div class="list-item"><span>Milana Illustration</span><span>8 Days</span></div>
+      </div>
+    </div>
+
+    <!-- Bottom Grid -->
+    <div class="bottom-grid">
+      <div class="region">
+        <h4>Employee Region</h4>
+        <canvas id="regionChart"></canvas>
+      </div>
+      <div class="clients">
+        <h4>Latest Clients</h4>
+        <div class="client">
+          <span>Mitchel - Illustration</span>
+          <span class="status wait">Wait</span>
+          <button class="chat-btn">Chat</button>
+        </div>
+        <div class="client">
+          <span>William - Icon Project</span>
+          <span class="status done">Done</span>
+          <button class="chat-btn">Chat</button>
+        </div>
+        <div class="client">
+          <span>Shahriar - UI Design</span>
+          <span class="status wait">Wait</span>
+          <button class="chat-btn">Chat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <link rel="Dashboard.js" href="web.js">
+</body>
+</html>

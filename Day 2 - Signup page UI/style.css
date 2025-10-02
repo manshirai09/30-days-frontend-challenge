@@ -1,0 +1,96 @@
+    /* Import a clean Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a4c5d, #250147, #01091f);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      padding: 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      text-align: center;
+      color: #fff;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    .input-group {
+      margin: 15px 0;
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      outline: none;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #c8cb21;
+      box-shadow: 0 0 10px #ff416c;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #ff416c;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff4b2b;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff4b2b;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      display: block;
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .login-link:hover {
+      color: #ff416c;
+    }

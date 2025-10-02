@@ -1,0 +1,158 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg") no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Dark overlay */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff4c29;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ff4c29;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        transition: height 0.3s ease-in-out;
+      }
+
+      .navbar ul.show {
+        height: 250px;
+        padding: 20px 0;
+      }
+
+      .navbar ul li {
+        margin: 15px 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Hero Content */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      text-align: center;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff4c29;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #f1f1f1;
+    }
+
+    .btn {
+      background: #ff4c29;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ff2e00;
+      transform: scale(1.05);
+    }
+
+    /* Extra content to test scrolling */
+    .content {
+      padding: 100px;
+      background: #222;
+      min-height: 100vh;
+    }
